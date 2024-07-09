@@ -1,0 +1,13 @@
+{
+  "name": "json-parser",
+  "version": "1.0.0",
+  "description": "A simple json parser implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "npx tsc"
+  },
+  "keywords": ["josn", "parser", "tokenizer"],
+  "author": "starktrix <inventorstark7@gmail.com>",
+  "license": "ISC"
+}
