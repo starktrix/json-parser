@@ -30,6 +30,8 @@ The above contains a typical json data. The following are the availble primitive
 - NULL = null
 - COMMA = ,
 - COLON = :,
-- STRING = ".."
+# - STRING = ".."
+- OPENQUOTE = "
+- CLOSEQUOTE = "
 - Number = 60
 ```
