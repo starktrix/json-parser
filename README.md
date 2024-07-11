@@ -35,3 +35,17 @@ The above contains a typical json data. The following are the availble primitive
 - CLOSEQUOTE = "
 - Number = 60
 ```
+
+
+### Parser
+
+We need to define the ASTNodes for JSON
+
+```yml
+- OBJECT
+- ARRAY
+- STRING
+- NUMBER
+- BOOLEAN #TRUE or FALSE
+- NULL
+```
