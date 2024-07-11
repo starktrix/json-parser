@@ -1,39 +1,15 @@
+import {
+  CLOSEBRACE,
+  CLOSEBRACKET,
+  CLOSEQUOTE,
+  COLON,
+  COMMA,
+  OPENBRACE,
+  OPENBRACKET,
+  OPENQUOTE,
+  Token,
+} from "./types";
 import { isFalse, isNull, isNumber, isTrue } from "./utils";
-
-export type TokenType =
-  | "OPENBRACE"
-  | "CLOSEBRACE"
-  | "OPENBRACKET"
-  | "CLOSEBRACKET"
-  | "TRUE"
-  | "FALSE"
-  | "NULL"
-  | "COMMA"
-  | "COLON"
-  | "OPENQUOTE"
-  | "CLOSEQUOTE"
-  | "STRING"
-  | "NUMBER";
-
-const OPENBRACE = "{";
-const CLOSEBRACE = "}";
-const OPENBRACKET = "[";
-const CLOSEBRACKET = "]";
-const COLON = ":";
-const COMMA = ",";
-const TRUE = "true";
-const FALSE = "false";
-const NULL = "null";
-const OPENQUOTE = '"';
-const CLOSEQUOTE = '"';
-// considering best way to represent it
-// might as well have a validation check
-// const NUMBER = ""
-
-interface Token {
-  type: TokenType;
-  value: string;
-}
 
 /**
  *
@@ -80,7 +56,8 @@ export const tokenizer = (input: any): Token[] => {
         continue;
       // handling string
       case OPENQUOTE:
-        tokens.push({ type: "OPENQUOTE", value: char });
+        // don't push the open qoute
+        // tokens.push({ type: "OPENQUOTE", value: char });
         let value = "";
         char = input[++current];
 
@@ -90,7 +67,7 @@ export const tokenizer = (input: any): Token[] => {
         }
         current++;
         tokens.push({ type: "STRING", value: value });
-        tokens.push({ type: "CLOSEQUOTE", value: CLOSEQUOTE });
+        // tokens.push({ type: "CLOSEQUOTE", value: CLOSEQUOTE });
         continue;
 
       default:
