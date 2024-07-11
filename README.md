@@ -49,3 +49,8 @@ We need to define the ASTNodes for JSON
 - BOOLEAN #TRUE or FALSE
 - NULL
 ```
+
+### TODO
+
+- Implement parsing json from file
+- Implement efficient error reporting of wrong parsing
